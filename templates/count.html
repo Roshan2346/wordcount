@@ -1,0 +1,13 @@
+<h1>There are {{count}} words in your sentence</h1>
+<a href="{% url 'home' %}">Start Again!</a>
+<h3>Your input text:</h3>
+
+{{ fulltext }}
+
+<h4>Word Counts:</h4>
+
+{% for word, counttotal in worddict %}
+
+    <p>{{ forloop.counter }} : {{word}} -- {{counttotal}}</p>
+
+{% endfor %}
